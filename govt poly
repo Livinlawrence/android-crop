@@ -14,17 +14,7 @@
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                if (regid.isEmpty()) {
-                    if (commonActions.isNetworkConnected()) {
-                        if (checkPlayServices()) {
-                            new GetGCMIDTask().execute();
-                        }
-                    } else {
-                        commonActions.showSnackToast(pb_loading, getString(R.string.msg_no_internet));
-                    }
-                } else {
-                    loginUser();
-                }
+                
             }
 
             @Override
